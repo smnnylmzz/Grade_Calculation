@@ -1,0 +1,13 @@
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\bin\Debug\grade_calculation.exe.config
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\bin\Debug\grade_calculation.exe
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\bin\Debug\grade_calculation.pdb
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.csproj.AssemblyReference.cache
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.csproj.SuggestedBindingRedirects.cache
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.frmOgrenciGiris.resources
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.Properties.Resources.resources
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.csproj.GenerateResource.cache
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.csproj.CoreCompileInputs.cache
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.exe
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.pdb
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.frmogrencidetay.resources
+C:\Users\smnny\OneDrive\Masaüstü\c#\grade_calculation\grade_calculation\obj\Debug\grade_calculation.frmogretmendetay.resources
