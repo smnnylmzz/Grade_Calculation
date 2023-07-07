@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace grade_calculation
 {
@@ -16,14 +17,45 @@ namespace grade_calculation
         {
             InitializeComponent();
         }
-
+        SqlConnection baglanti = new SqlConnection(@"Data Source=OSMAN\SQLEXPRESS;Initial Catalog=DBOGRENCINOT;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
-            frmogrencidetay fr = new frmogrencidetay();
-            fr.numara = maskedTextBox1.Text;
-            fr.Show();
-            this.Hide();
+            if (string.IsNullOrEmpty(maskedTextBox1.Text))
+            {
+                MessageBox.Show("Lütfen bilgilerinizi giriniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                baglanti.Open();
+
+                SqlCommand komut = new SqlCommand("SELECT * FROM TBLDERS WHERE OGRNUMARA = @p1", baglanti);
+                komut.Parameters.AddWithValue("@p1", maskedTextBox1.Text);
+                SqlDataReader dr = komut.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    frmogrencidetay fr = new frmogrencidetay();
+                    fr.numara = maskedTextBox1.Text;
+                    fr.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Okul numaranız veya şifrenizi yanlış girdiniz. Lütfen bilgilerinizi kontrol edin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veritabanı hatası: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                baglanti.Close();
+            }
         }
+
 
 
 
@@ -44,3 +76,4 @@ namespace grade_calculation
         }
     }
 }
+
