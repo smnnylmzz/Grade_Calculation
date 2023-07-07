@@ -58,7 +58,7 @@ namespace grade_calculation
             s1 = Convert.ToDouble(txtsinav1.Text);
             s2 = Convert.ToDouble(txtsinav2.Text);
             s3 = Convert.ToDouble(txtsinav3.Text);
-            ortalama = (s1+s2+s3);
+            ortalama = (s1+s2+s3)/3;
             lblortalama.Text = ortalama.ToString();
 
             if (ortalama >= 50)
@@ -75,7 +75,6 @@ namespace grade_calculation
             komut.Parameters.AddWithValue("@P1",txtsinav1.Text);
             komut.Parameters.AddWithValue("@P2", txtsinav2.Text);
             komut.Parameters.AddWithValue("@P3", txtsinav3.Text);
-            komut.Parameters.AddWithValue("@P3",txtsinav3.Text);
             komut.Parameters.AddWithValue("@P4",decimal.Parse(lblortalama.Text));
             komut.Parameters.AddWithValue("@P5",durum);
             komut.Parameters.AddWithValue("@P6",mskdTxt.Text);
